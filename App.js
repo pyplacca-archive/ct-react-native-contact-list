@@ -1,21 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ContactsScreen from './assets/screens/Contacts'
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <StatusBar style="light" backgroundColor='#44abee'/>
+      <ContactsScreen />
+
+      {/* Signature */}
+      <Text style={{
+        position: 'absolute',
+        alignSelf: 'center',
+        bottom: -270,
+        color: '#fff',
+        backgroundColor: '#000',
+        padding: 10,
+        width: '100%',
+        textAlign: 'center'
+      }}>
+        David Placca - Codetrain Gen 14
+      </Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: 30,
   },
+
 });
